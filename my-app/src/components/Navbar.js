@@ -3,15 +3,15 @@ import { NavLink } from "react-router-dom";
 
 export const Navbar =()=>{
   return (
-    <header className="bg-white py-4 shadow-md w-full ">
-      <div className="container mx-[10px] flex justify-between items-center w-full">
+    <header className="bg-white py-4 shadow-md w-full z-2 ">
+      <div className="container mx-[8%] flex   justify-between items-center w-full">
         <img
           src="assets/images/logo-3-2 rognage.png"
           alt="Logo société"
-          className="w-[8%] "
+          className="w-[8%] ml-[10px]"
         />
-        <h1 className="text-lime-600 text-xl font-bold">
-          Gregory Maillard - Paysagiste
+        <h1 className="text-lime-600 text-3xl font-light">
+          Création et entretien de vos jardins
         </h1>
         <nav>
           <ul className="flex">
