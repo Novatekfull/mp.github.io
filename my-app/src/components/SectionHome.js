@@ -2,34 +2,34 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { useScrollPosition } from "../hook/useScrollPosition";
 
-function ScrollToTopOnRouteChange() {
-  const location = useLocation();
+// function ScrollToTopOnRouteChange() {
+//   const location = useLocation();
 
-  useEffect(() => {
-    window.scrollTo(0, 0); // Défilement vers le haut de la page à chaque changement de page
-  }, [location]); // Effectuer le défilement lorsque l'emplacement change
+//   useEffect(() => {
+//     window.scrollTo(0, 0); // Défilement vers le haut de la page à chaque changement de page
+//   }, [location]); // Effectuer le défilement lorsque l'emplacement change
 
-  return null;
-}
+//   return null;
+// }
 
 export const SectionHome = () => {
 
 
 
 
-  const scrollPosition = useScrollPosition();
+  // const scrollPosition = useScrollPosition();
 
 
 
   return (
     <section id="banner" className="flex  w-full items-center justify-center">
-      <ScrollToTopOnRouteChange />
-      <div className="flex  flex-col items-center justify-center">
-        <div className="w-full  bg-gray-300">
+      {/* <ScrollToTopOnRouteChange /> */}
+      <div className="flex  flex-col items-center justify-center w-full">
+        <div className="w-full  bg-black  opacity-55">
           <img
             src="assets/images/image1.jpg"
             alt="Banner Image"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover  bg-black"
           />
         </div>
         <div className="w-1/3 flex flex-col items-center justify-center">
@@ -40,9 +40,9 @@ export const SectionHome = () => {
       <div></div>
       <article
         id="firstArticle"
-        className={`${
-          scrollPosition > 300 ? "opacity-100 " : "opacity-0 absolute"
-        } `}
+        // className={`${
+        //   scrollPosition > 300 ? "opacity-100 " : "opacity-0 absolute"
+        // } `}
       >
         <h1>article 1</h1>
         <p>
@@ -57,7 +57,6 @@ export const SectionHome = () => {
           et diam. Pellentesque eget quam eget sapien volutpat suscipit.
         </p>
       </article>
-      
     </section>
   );
 };
